@@ -6,6 +6,14 @@
     <title>Subir Imagen</title>
 </head>
 <body>
+    <header>
+        <h2>Bienvenido, <%= user.displayName || 'Usuario' %>!</h2>
+        <nav>
+          <a href="/upload">Subir Imagen</a>
+          <a href="/images">Ver Imágenes</a>
+          <a href="/logout">Cerrar Sesión</a>
+        </nav>
+      </header>
     <h1>Subir Imagen</h1>
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <input type="file" name="image" required>

@@ -6,6 +6,15 @@
   <title>Lista de Imágenes</title>
 </head>
 <body>
+  <header>
+    <h2>Bienvenido, <%= user.displayName || 'Usuario' %>!</h2>
+    <nav>
+      <a href="/upload">Subir Imagen</a>
+      <a href="/images">Ver Imágenes</a>
+      <a href="/logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
   <h1>Imágenes almacenadas</h1>
   <div>
     <% imageUrls.forEach(url => { %>
